@@ -1,18 +1,20 @@
-// Copyright (c) 2020 Mark Palfi All rights reserved
-//
 // Created by: Mark Palfi
-// Created on: Mar 2022
+// Created on: Sep 2020
 // This file contains the JS functions for index.html
 
+'use strict'
 /**
- * This function gets users street name and number and shows it back to user.
+ * This function calculates area and perimeter of triangle.
  */
-function enterClicked() {
+function calculate () {
   // input
-  const street_name = document.getElementById("street-name").value
-  const street_number = parseInt(document.getElementById("street-number").value)
+  const lenght = parseInt(document.getElementById('lenght-of-pyramid').value)
+  const width = parseInt(document.getElementById('width-of-pyramid').value)
+  const height = parseInt(document.getElementById('height-of-pyramid').value)
+
+  // process
+  const volume = (lenght * width * height) / 3
 
   // output
-  document.getElementById("address").innerHTML =
-   "You live on: " + street_name + ", house " + street_number + "."
+  document.getElementById('volume').innerHTML = "Volume is: " + volume.toFixed(2) + " cm³"
 }
